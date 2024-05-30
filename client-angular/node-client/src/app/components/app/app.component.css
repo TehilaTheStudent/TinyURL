@@ -1,0 +1,14 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  img{
+    height: 50px;
+    width: 220px;
+  }
+  button{
+    margin: 15px;
+  }
+  main{
+   background-color: rgb(255, 244, 230);
+   height: 100vh;
+  }

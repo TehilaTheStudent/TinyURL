@@ -1,0 +1,6 @@
+<main>
+    <p class="dev">view user links</p>
+    <p *ngIf="userLoadingObservable|async"><progress-spinner-component></progress-spinner-component></p>
+    <error-component *ngIf="userErrorObservable | async" [error]="userErrorObservable|async"></error-component>
+    <divided-list-component [linkInput]="links|async" [routeInput]="'/user/link/'"></divided-list-component>
+</main>

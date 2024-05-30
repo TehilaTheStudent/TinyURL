@@ -1,0 +1,18 @@
+<main>
+    <p class="dev">user dashboard component</p>
+
+    <div class="dashboard">
+        <nav>
+            <button mat-stroked-button color='primary' routerLink="links">my links
+                <mat-icon>link</mat-icon>
+            </button>
+            <button mat-stroked-button color="accent" routerLink="home">statistics
+                <mat-icon>bar_chart</mat-icon></button>
+        </nav>
+        <div class="router-outlet">
+            <router-outlet></router-outlet>
+        </div>
+
+
+    </div>
+</main>

@@ -1,0 +1,9 @@
+<main>
+    <p class="dev">view all links</p>
+
+    <p *ngIf="adminLoadingObservable|async"><progress-spinner-component></progress-spinner-component></p>
+    <error-component *ngIf="adminErrorObservable | async" [error]="adminErrorObservable|async"></error-component>
+    <divided-list-component [linkInput]="links|async" [routeInput]='"/admin/link/"'></divided-list-component>
+
+    <!-- //TODO relative to -->
+</main>

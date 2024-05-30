@@ -1,0 +1,36 @@
+<main>
+    <mat-toolbar style="
+        background-color: transparent;
+        padding-top: 5vh;
+        margin-bottom: 50px;
+        position:  fixed;
+        ">
+
+
+        <img src="../../../assets/logo.png">
+        <button mat-fab extended  color="accent" routerLink="home">
+            <mat-icon>home</mat-icon>
+            home
+          </button>
+        <span class="example-spacer"></span>
+
+        <button   *ngIf="!authService.isLoggedIn()" routerLink="login" mat-fab extended color="primary">
+            <mat-icon>login</mat-icon>
+            login
+        </button>
+   
+        <button (click)="goToDashboard()" *ngIf="authService.isLoggedIn()" mat-fab extended color="primary">
+            <mat-icon>dashboard</mat-icon>
+            dashboard
+        </button>
+     <button *ngIf="authService.isLoggedIn()" (click)="onLogout()" mat-fab extended color="warn">
+            <mat-icon>logout</mat-icon>
+            logout
+        </button>
+
+    </mat-toolbar>
+
+
+    <router-outlet></router-outlet>
+
+</main>

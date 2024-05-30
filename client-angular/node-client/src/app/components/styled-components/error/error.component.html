@@ -1,0 +1,8 @@
+<div class="alert alert-danger" role="alert">
+    <h2>Error</h2>
+    <p>Status: {{ error?.status }}</p>
+    <p>Message: {{ error?.message }}</p>
+    <p *ngIf="error?.error">Error: {{ error?.error }}</p>
+    <p *ngIf="error?.details">Details: {{ error?.details }}</p>
+    <p>failedAction: {{error?.failedAction}}</p>
+</div>

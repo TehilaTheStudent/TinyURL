@@ -1,0 +1,31 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: background-color 0.2s ease-in-out;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgb(228, 238, 238);
+}
+
+.container{
+    padding: 20px;
+}
+p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.newUrl{
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+    margin: 5px 0 5px 0;
+    background: linear-gradient(90deg, rgba(211,201,218,1) 0%, rgba(204,189,214,1) 6%, rgba(210,178,223,1) 13%, rgba(221,182,232,1) 22%, rgba(246,212,236,1) 33%, rgba(250,214,233,1) 37%, rgba(250,208,224,1) 44%, rgba(249,211,211,1) 50%, rgba(244,219,214,1) 55%, rgba(215,233,211,1) 64%, rgba(197,224,224,1) 70%, rgba(206,200,223,1) 80%, rgba(232,204,231,1) 88%, rgba(215,170,165,1) 100%);
+}

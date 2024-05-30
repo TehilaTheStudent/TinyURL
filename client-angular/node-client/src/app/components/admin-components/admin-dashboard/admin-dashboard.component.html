@@ -1,0 +1,20 @@
+<main>
+    <div class="dashboard">
+        <nav>
+            <button mat-stroked-button color='primary' routerLink="users">users
+                <mat-icon>person </mat-icon>
+            </button>
+            <button mat-stroked-button color="accent" routerLink="home">statistics
+                <mat-icon>bar_chart</mat-icon>
+            </button>
+            <button mat-stroked-button color="secondary" routerLink="links">links
+                <mat-icon>link</mat-icon>
+            </button>
+        </nav>
+        <div class="router-outlet">
+            <router-outlet></router-outlet>
+        </div>
+
+
+    </div>
+</main>

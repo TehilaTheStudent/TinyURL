@@ -1,0 +1,19 @@
+main{
+    padding-top: 100px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    row-gap: 30px;
+    margin: auto;
+  }
+  button.submit{
+    
+    height: 50px;
+    width: 100px;
+  }
+.active-submit{
+  color: rgb(255, 0, 123);
+}

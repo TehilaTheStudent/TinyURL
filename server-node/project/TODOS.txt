@@ -1,0 +1,4 @@
+insights:
+
+app.set('trust proxy', true);
+response.send etc dont ent the func ! its not like return from func, notice not to do things that might couse error

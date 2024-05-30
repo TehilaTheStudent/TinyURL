@@ -1,0 +1,39 @@
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" style="
+    background-color: transparent;
+    box-shadow: none;
+    
+    ">
+  <mat-expansion-panel-header>
+    <mat-panel-title style="
+          display: flex;
+          justify-content: center;
+          ">
+      {{panelOpenState ? 'hide sources' : 'expand to see sources'}}
+
+    </mat-panel-title>
+    <!-- <mat-panel-description>
+        </mat-panel-description> -->
+  </mat-expansion-panel-header>
+  <mat-list>
+    <ng-container  *ngFor="let source of link.sources">
+      <mat-divider></mat-divider>
+      <mat-list-item>
+      <span matListItemTitle>
+        <button (click)="onCopyLink(link.newUrl+'?'+ link.sourceParamKey+'='+source.value,icon1)" mat-button
+        style="border: none;
+        background-color: transparent;"
+          matTooltip="copy link" color="primary" aria-label="Example fab with a heart icon">
+          <mat-icon #icon1>content_copy</mat-icon>
+        </button>
+        {{source.description}}
+
+      </span>
+      <span matListItemLine>
+        {{link.newUrl+'?'+ link.sourceParamKey+'='+source.value}}
+      </span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    </ng-container>
+    
+  </mat-list>
+</mat-expansion-panel>

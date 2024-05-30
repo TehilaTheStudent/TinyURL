@@ -1,0 +1,7 @@
+<main>
+    <p class="dev">view all users</p>
+    <!-- <p *ngIf="adminLoadingObservable|async"><progress-spinner-component></progress-spinner-component></p>
+    <error-component *ngIf="adminErrorObservable | async" [error]="adminErrorObservable|async"></error-component>
+ <pre *ngFor="let user of users|async">  <section>{{user|json}}</section> </pre> -->
+ <users-table-component [usersInput]="users"></users-table-component>
+</main>

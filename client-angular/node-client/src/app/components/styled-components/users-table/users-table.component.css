@@ -1,0 +1,14 @@
+table {
+    width: 600px;
+  }
+  
+  th ,td{
+    text-align: center;
+  }
+
+  .mat-row:hover {
+    transition:background-color 0.2s ease-in-out;
+    background-color: #f4e0e0; /* or any color you prefer */
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,23 @@
+<main>
+    <p class="dev">login component</p>
+    <form [formGroup]="formGroupLogin" (ngSubmit)="onLogin()">
+        <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email" (blur)="updateErrorMessage()"
+                required>
+            @if (formGroupLogin.controls['email'].invalid&&formGroupLogin.controls['email'].touched) {
+            <mat-error>{{emailErrorMessage}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="password" (blur)="updateErrorMessage()"
+                required>
+            @if (formGroupLogin.controls['password'].invalid&&formGroupLogin.controls['password'].touched) {
+            <mat-error>{{passwordErrorMessage}}</mat-error>
+            }
+        </mat-form-field>
+        <button class="submit"  type="submit" [disabled]="formGroupLogin.invalid" mat-raised-button  [ngClass]="{'active-submit':!formGroupLogin.invalid}">login</button>
+    </form>
+    <error-component *ngIf="errorLoign" [error]="errorLoign"></error-component>
+</main>
