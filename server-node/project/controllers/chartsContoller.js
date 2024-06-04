@@ -10,7 +10,7 @@ function sameDate(d1, d2) {
 }
 function countClicksForDate(date, clicks) {
     let num=clicks.filter(click => sameDate(click.clickedAt, date)).length
-    return num
+    return num  
 }
 function makeLabels(links) {
     let labels = []
@@ -21,6 +21,7 @@ function makeLabels(links) {
             }
         })
     })
+    labels.sort((label1,label2)=>label1-label2)
     return labels
 }
 function userClicksInDateCount(links, user, date) {
@@ -48,10 +49,14 @@ const chartsController = {
                 datasets: [{ data: [] }],//clicksCount
 
             }
+            let clicksWithSource=0
             linkById.sources.forEach(source => {
                 data.labels.push(source.description)
                 data.datasets[0].data.push(source.clicksCount)
+                clicksWithSource+=source.clicksCount
             });
+            data.labels.push("clicks with no source")
+            data.datasets[0].data.push(linkById.clicks.length-clicksWithSource)
             return response.json({ data: data })
         } catch (e) {
             response.status(400).json({ message: e.message })
@@ -77,7 +82,7 @@ const chartsController = {
                     data.datasets[userIndex].data.push(userClicksInDateCount(links, user, label))
                 })
             })
-            let shortLabels = data.labels.map(label => label.toISOString().substring(0, 10))
+            let shortLabels = data.labels.map(label => label.toISOString().substring(0, 7))
             data.labels = shortLabels
             response.json({ data: data })
 
@@ -108,7 +113,7 @@ const chartsController = {
                     data.datasets[linkIndex].data.push(countClicksForDate(label, link.clicks))
                 })
             })
-            let shortLabels = data.labels.map(label => label.toISOString().substring(0, 10))
+            let shortLabels = data.labels.map(label => label.toISOString().substring(0, 7))
             data.labels = shortLabels
             response.json({ data: data })
         } catch (e) {
