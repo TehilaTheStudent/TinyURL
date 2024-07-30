@@ -1,4 +1,4 @@
-# URL Shortening Service
+# TinyURL- URL Shortening Service
 
 ## Overview
 This project provides a URL shortening service similar to TinyURL. It includes both a server-side application and a client-side application, designed to offer a seamless experience for URL management and analytics.
@@ -19,3 +19,8 @@ This project provides a URL shortening service similar to TinyURL. It includes b
 - **Features:**
   - Visualizes URL analytics with interactive charts.
   - Provides a user-friendly interface for managing URLs and viewing analytics.
+ 
+
+
+---
+Thank you for checking out the URL Shortening Service! We hope it meets your needs for URL management and analytics.
